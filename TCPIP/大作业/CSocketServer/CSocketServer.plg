@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CSocketServer - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\Ronal\AppData\Local\Temp\RSP5A43.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/CSocketServer.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\Ronal\Documents\projects\TCPIP\大作业\CSocketServer\CSocketServer.cpp"
+]
+Creating command line "cl.exe @C:\Users\Ronal\AppData\Local\Temp\RSP5A43.tmp" 
+Creating temporary file "C:\Users\Ronal\AppData\Local\Temp\RSP5A44.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/CSocketServer.pdb" /debug /machine:I386 /out:"Debug/CSocketServer.exe" /pdbtype:sept 
+".\Debug\CSocketServer.obj"
+]
+Creating command line "link.exe @C:\Users\Ronal\AppData\Local\Temp\RSP5A44.tmp"
+<h3>Output Window</h3>
+Compiling...
+CSocketServer.cpp
+C:\Users\Ronal\Documents\projects\TCPIP\大作业\CSocketServer\CSocketServer.cpp(30) : warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Ronal\Documents\projects\TCPIP\大作业\CSocketServer\CSocketServer.cpp(35) : warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Ronal\Documents\projects\TCPIP\大作业\CSocketServer\CSocketServer.cpp(40) : warning C4553: '==' : operator has no effect; did you intend '='?
+C:\Users\Ronal\Documents\projects\TCPIP\大作业\CSocketServer\CSocketServer.cpp(41) : warning C4553: '==' : operator has no effect; did you intend '='?
+C:\Users\Ronal\Documents\projects\TCPIP\大作业\CSocketServer\CSocketServer.cpp(182) : warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Ronal\Documents\projects\TCPIP\大作业\CSocketServer\CSocketServer.cpp(209) : warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Ronal\Documents\projects\TCPIP\大作业\CSocketServer\CSocketServer.cpp(270) : warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Ronal\Documents\projects\TCPIP\大作业\CSocketServer\CSocketServer.cpp(299) : warning C4018: '<' : signed/unsigned mismatch
+C:\Users\Ronal\Documents\projects\TCPIP\大作业\CSocketServer\CSocketServer.cpp(77) : warning C4101: 'sSocket' : unreferenced local variable
+C:\Users\Ronal\Documents\projects\TCPIP\大作业\CSocketServer\CSocketServer.cpp(77) : warning C4101: 'sClient' : unreferenced local variable
+Linking...
+
+
+
+<h3>Results</h3>
+CSocketServer.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

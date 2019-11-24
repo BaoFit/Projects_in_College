@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CSocketClient - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\Ronal\AppData\Local\Temp\RSP189E.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/CSocketClient.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\Ronal\Documents\projects\TCPIP\´ó×÷Òµ\CSocketClient\CSocketClientDlg.cpp"
+]
+Creating command line "cl.exe @C:\Users\Ronal\AppData\Local\Temp\RSP189E.tmp" 
+Creating temporary file "C:\Users\Ronal\AppData\Local\Temp\RSP18AF.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/CSocketClient.pdb" /debug /machine:I386 /out:"Debug/CSocketClient.exe" /pdbtype:sept 
+".\Debug\Chat.obj"
+".\Debug\CSocketClient.obj"
+".\Debug\CSocketClientDlg.obj"
+".\Debug\MySocket.obj"
+".\Debug\MySocket2.obj"
+".\Debug\StdAfx.obj"
+".\Debug\CSocketClient.res"
+]
+Creating command line "link.exe @C:\Users\Ronal\AppData\Local\Temp\RSP18AF.tmp"
+<h3>Output Window</h3>
+Compiling...
+CSocketClientDlg.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+CSocketClient.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

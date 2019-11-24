@@ -1,0 +1,54 @@
+{% extends "title_base.html"  %}
+{% block title  %}
+{% load staticfiles %}
+<link type="image/x-icon" rel="shortcut icon" href="{% static "favicon.ico" %}">
+<link type="text/css" rel="stylesheet" href="{% static "css/common.css" %}">
+<link type="text/css" rel="stylesheet" href="{% static "css/register.css" %}">
+</head>
+
+<body class="review">
+<div class="wrapper">
+    <div class="header clearfix">
+        <span class="logo">BOOM PLAYER</span>
+        <span class="logo-tip">Enjoy your time in BOOM >_<</span>
+    </div>
+
+    <div class="content clearfix">
+        <!-- 登录注册版块 -->
+        <div id="unauth_main" class="login-regist">
+            <div class="login-box switch_box" style="display:block;">
+                <div class="title">修改密码</div>
+                <form id="loginForm" class="formBox" action="" method="post">
+                    {% csrf_token %}
+                    <div id="loginForm",class="formBox">
+                    <div class="itembox user-name">
+                        <div class="item">
+                            {{ profileform.oldpass }}
+                        </div>
+                    </div>
+                    <div class="itembox user-name">
+                        <div class="item">
+                            {{ profileform.pass1 }}
+                        </div>
+                    </div>
+                    <div class="itembox user-pwd">
+                        <div class="item">
+                            {{ profileform.pass2 }}
+                        </div>
+                    </div>
+                    {% if protips %}
+                        <div>提示:<span>{{ protips }}</span></div>
+                    {% endif %}
+                    <div id="loginBtnBox" class="login-btn">
+                        <input id="J_LoginButton" type="submit" value="确认修改" class="tabInput pass-btn" />
+                    </div>
+                    <div class="pass-reglink">密码修改后，点击<a class="switch" href="/user/login.html">这里</a>重新登录</div>
+                   </div>
+                </form>
+            </div>
+            <!-- //修改密码版块end -->
+        </div>
+    </div>
+</div>
+<script data-main="{% static "js/register.js" %}" src="{% static "js/require.js" %}"></script>
+{% endblock  %}

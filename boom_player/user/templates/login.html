@@ -1,0 +1,79 @@
+{% extends "title_base.html"  %}
+{% block title  %}
+{% load staticfiles %}
+<link type="image/x-icon" rel="shortcut icon" href="{% static "favicon.ico" %}">
+<link type="text/css" rel="stylesheet" href="{% static "css/common.css" %}">
+<link type="text/css" rel="stylesheet" href="{% static "css/register.css" %}">
+</head>
+
+<body class="review">
+<div class="wrapper">
+    <div class="header clearfix">
+        <span class="logo">BOOM PLAYER</span>
+        <span class="logo-tip">Enjoy your time in BOOM >_<</span>
+    </div>
+
+    <div class="content clearfix">
+        <!-- 登录注册版块 -->
+        <div id="unauth_main" class="login-regist">
+            <div class="login-box switch_box" style="display:block;">
+                <div class="title">用户登录</div>
+                <form id="loginForm" class="formBox" action="" method="post">
+                <!--表单的错误机制，输入框不能为空，否则报错-->
+                    {% csrf_token %}
+                    <div id="loginForm",class="formBox">
+                    <div class="itembox user-name">
+                        <div class="item">
+                            {{ user.name }}
+                        </div>
+                    </div>
+                    <div class="itembox user-pwd">
+                        <div class="item">
+                            {{ user.password1 }}
+                        </div>
+                    </div>
+                    {% if tips %}
+                        <div>提示:<span>{{ tips }}</span></div>
+                    {% endif %}
+                    <div id="loginBtnBox" class="login-btn">
+                        <input id="J_LoginButton" type="submit" value="马上登录" class="tabInput pass-btn" />
+                    </div>
+                    <div class="pass-reglink">还没有我的音乐账号？<a class="switch" href="javascript:;">免费注册</a></div>
+                    </div>
+                </form>
+            </div>
+            <!-- //登录版块end -->
+            <div class="regist-box switch_box" style="display:none;">
+                <div class="title">用户注册</div>
+                <form id="registerForm" class="formBox" method="post" action="">
+                    {% csrf_token %}
+                    <div id="registForm" class="formBox">
+                    <div class="itembox user-name">
+                    <div class="item">
+                        {{ user.name }}
+                    </div>
+                    </div>
+                    <div class="itembox user-pwd">
+                    <div class="item">
+                        {{ user.password1 }}
+                    </div>
+                    </div>
+                    <div class="itembox user-pwd">
+                    <div class="item">
+                        <input type="password" name="password2" placeholder="确认密码" class="txt tabInput">
+                    </div>
+                    </div>
+                    {% if tips %}
+                        <div>提示:<span>{{ tips }}</span></div>
+                    {% endif %}
+                        <input type="submit" value="免费注册" id="J_RegButton" class="pass-btn tabInput"/>
+                        <div class="pass-reglink">已有我的音乐帐号，<a class="switch" href="javascript:;">立即登录</a></div>
+                    </div>
+                </form>
+            </div>
+            <!-- //注册版块end -->
+        </div>
+    </div>
+</div>
+<script data-main="{% static "js/register.js" %}" src="{% static "js/require.js" %}"></script>
+{% endblock  %}

@@ -1,0 +1,27 @@
+{% extends "base.html"  %}
+{% block content %}
+{% load staticfiles %}
+<link type="text/css" rel="stylesheet" href="{% static "css/common.css" %}">
+<link type="text/css" rel="stylesheet" href="{% static "css/play.css" %}">
+</head>
+ <body>
+  <div class="product-detail-box clearfix" align ="center" width="50%" style="height:800px;">
+  <div class="product-comment" style="width:800px; height:700px;">
+		<h2 class="list_title" align ="center" width="50%" > 我 的 歌 单 </h2>
+        <ul class="playing-li" type="overflow:auto" style="height:700px;">
+
+            <!--播放列表-->
+            {% for line in collectsong_info %}
+                <li class="current">
+                            <a class="name" href="{% url 'index' line.song_id %}" target="play" >{{line.song_name}}</a>
+                            <a class="singer" href="javascript:;" target="_blank" >{{line.song_singer}}</a>
+                            <a class="singer" href="javascript:;" target="_blank" >{{line.song_time}}</a>
+                </li>
+            {%endfor %}
+        </ul>
+      <div class="nplayL-btns">
+      </div><!--end nplayL-btns-->
+
+ </div>
+  </div>
+{% endblock  %}
